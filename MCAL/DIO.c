@@ -1,7 +1,7 @@
-typedef unsigned char u8;
-
-#include <util/delay.h>
+#include "std_types.h"
+#include "std_math.h"
 #include "DIO.h"
+#include <util/delay.h>
 
 #define DDRA *((volatile u8*)0x3A)
 #define DDRB *((volatile u8*)0x37)
@@ -17,14 +17,6 @@ typedef unsigned char u8;
 #define PINB  *((volatile u8*)0x36)
 #define PINC  *((volatile u8*)0x33)
 #define PIND  *((volatile u8*)0x30)
-
-// Set bit BIT in REG
-#define SET_BIT(REG,BIT)			REG|=(1<<BIT)
-// Clear bit BIT in REG
-#define CLR_BIT(REG,BIT)			REG&=~(1<<BIT)
-// Get bit BIT in REG
-#define GET_BIT(REG,BIT) 			((REG>>BIT)&1)
-
 
 DIO_enumErrorStatus_t DIO_enumSetPortConfig(u8 Copy_enumPortNum, DIO_enumConfig_t Copy_enumConfig )
 {
