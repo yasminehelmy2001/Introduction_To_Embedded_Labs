@@ -56,7 +56,7 @@
  DIO_enumErrorStatus_t DIO_enumSetPinConfig(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumConfig_t Copy_enumConfig);
  DIO_enumErrorStatus_t DIO_enumSetPort(DIO_enumPorts_t Copy_enumPortNum, DIO_enumLogicState Copy_enumLogicState);
  DIO_enumErrorStatus_t DIO_enumSetPin(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumLogicState Copy_enumLogicState);
- DIO_enumErrorStatus_t DIOenumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumLogicState* Add_PenumPinValue);
+ DIO_enumErrorStatus_t DIO_enumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumLogicState* Add_PenumPinValue);
 
 
 #endif /* DIO_H_ */
