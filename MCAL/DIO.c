@@ -322,7 +322,7 @@ DIO_enumErrorStatus_t DIO_enumSetPinConfig(DIO_enumPorts_t Copy_enumPortNum, DIO
 
 	}
 
-DIO_enumErrorStatus_t DIOenumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumLogicState* Add_PenumPinValue)
+DIO_enumErrorStatus_t DIO_enumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_enumPins_t Copy_enumPinNum, DIO_enumLogicState* Add_PenumPinValue)
 {
 	DIO_enumErrorStatus_t RET_enumErrorStatus;
 	if(Copy_enumPortNum>DIO_enumPortD)
@@ -339,16 +339,16 @@ DIO_enumErrorStatus_t DIOenumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_enu
 		switch(Copy_enumPortNum)
 		{
 			case DIO_enumPortA:
-			*Add_PenumPinValue=GET_BIT(PORTA,Copy_enumPinNum);
+			*Add_PenumPinValue=GET_BIT(PINA,Copy_enumPinNum);
 			break; 
 			case DIO_enumPortB:
-			*Add_PenumPinValue=GET_BIT(PORTB,Copy_enumPinNum);
+			*Add_PenumPinValue=GET_BIT(PINB,Copy_enumPinNum);
 			break;
 			case DIO_enumPortC:
-			*Add_PenumPinValue=GET_BIT(PORTC,Copy_enumPinNum);
+			*Add_PenumPinValue=GET_BIT(PINC,Copy_enumPinNum);
 			break;
 			case DIO_enumPortD:
-			*Add_PenumPinValue=GET_BIT(PORTD,Copy_enumPinNum);
+			*Add_PenumPinValue=GET_BIT(PIND,Copy_enumPinNum);
 			break;
 		}
 	}
