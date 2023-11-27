@@ -1,5 +1,3 @@
-#include "std_types.h"
-#include "std_math.h"
 #include "DIO.h"
 #include <util/delay.h>
 
@@ -332,6 +330,10 @@ DIO_enumErrorStatus_t DIO_enumReadState(DIO_enumPorts_t Copy_enumPortNum, DIO_en
 	else if(Copy_enumPinNum>DIO_enumPin7)
 	{
 		RET_enumErrorStatus=DIO_enumWrongPin;
+	}
+	else if(Add_PenumPinValue==NULL)
+	{
+		RET_enumErrorStatus=DIO_enumNullPointer;
 	}
 	else
 	{

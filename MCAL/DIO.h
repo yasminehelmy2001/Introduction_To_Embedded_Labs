@@ -9,6 +9,9 @@
 #ifndef DIO_H_
 #define DIO_H_
  
+#include "std_types.h"
+#include "std_math.h"
+
  typedef enum
  {
 	 DIO_enumOk,

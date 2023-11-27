@@ -1,7 +1,5 @@
 #include <util/delay.h>
-#include "std_types.h"
-#include "std_math.h"
-#include "DIO.h"
+#include "../../../MCAL/DIO.h"
 
 int main(void)
 {
